@@ -15,7 +15,12 @@
 // }
 
 function insert_Row(){
-	let table = document.getElementById("sampleTable");
-	let x = `<tr><td>New Cell1</td><td>New Cell2</td></tr>`;
-	table.innerHTML = x + table.innerHTML;
+	// let table = document.getElementById("sampleTable");
+	// let x = `<tr><td>New Cell1</td><td>New Cell2</td></tr>`;
+	// table.innerHTML = x + table.innerHTML;
+	const table = document.getElementById('sampleTable');
+
+  const newRow = table.insertRow(0); // Insert at position 1 (just after the header row)
+
+  newRow.insertAdjacentHTML('beforeend', '<td>New Cell1</td><td>New Cell2</td>');
 }
